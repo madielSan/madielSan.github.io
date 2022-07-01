@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accueil | Oh-my-food !</title>
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <img class="logo-container__header-logo" src="../images/logo/ohmyfood.png" srcset="../images/logo/ohmyfood@2x.svg" alt="oh-my-food logo">
+            </div>
+        </header>
+
+        <main>
+            <section class="user-location">
+                <span class="user-location__icon"> loc.logo </span>
+                <p class="user-location__city">Paris, Belleville</p>
+            </section>
+
+            <section class="homepage-description">
+                <h1 class="homepage-description__title">Réservez le menu qui vous convient</h1>
+                <p class="homepage-description__description">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <button class="homepage-description__explorer-button" type="button">Explorez nos restaurants</button>
+            </section>
+
+            <section class="operation">
+                <h1 class="operation__title">Fonctionnement</h1>
+                <div class="operation__block">
+                    <span class="operation__block__step">1</span>
+                    <span class="operation__block__icon">phone-logo</span>
+                    <p class="operation__block__description">Choisissez un restaurant</p>
+                </div>
+                <div class="operation__block">
+                    <span class="operation__block__step">2</span>
+                    <span class="operation__block__icon">list-logo</span>
+                    <p class="operation__block__description">Composez votre menu</p>
+                </div>
+                <div class="operation__block" id="enjoy-restaurant">
+                    <span class="operation__block__step">3</span>
+                    <span class="operation__block__icon">resto-logo</span>
+                    <p class="operation__block__description">Dégustez au restaurant</p>
+                </div>
+            </section>
+
+            <section class="restaurants">
+                <h1 class="restaurants__title">Restaurants</h1>
+                    <article class="restaurant" id="card-la-palette-du-gout">
+                        <a href="#" class="restaurant__link" aria-label="Accédez à la carte - La palette du gout">
+                            <div class="restaurant__image restaurant__image--1">
+                                <p class="restaurant__new">Nouveau</p>
+                            </div>
+                            <div class="restaurant__description">
+                                <h2 class="restaurant__description__title">La palette du goût</h2>
+                                <p class="restaurant__description__location">Ménilmontant</p>
+                            </div>
+                            <div class="restaurant__love">heart</div>
+                        </a>
+                    </article>
+                    <article class="restaurant" id="card-la-note-enchantee">
+                        <a href="#" class="restaurant__link" aria-label="Accédez à la carte - La note enchantée">
+                            <div class="restaurant__image restaurant__image--2">
+                                <p class="restaurant__new">Nouveau</p>
+                            </div>
+                            <div class="restaurant__description">
+                                <h2 class="restaurant__description__title">La note enchantée</h2>
+                                <p class="restaurant__description__location">Charonne</p>
+                            </div>
+                            <div class="restaurant__love">heart</div>
+                        </a>
+                    </article>
+                    <article class="restaurant" id="card-a-la-francaise">
+                        <a href="#" class="restaurant__link" aria-label="Accédez à la carte - À la française ">
+                            <div class="restaurant__image restaurant__image--3"></div>
+                            <div class="restaurant__description">
+                                <h2 class="restaurant__description__title">À la française</h2>
+                                <p class="restaurant__description__location">Cité Rouge</p>
+                            </div>
+                            <div class="restaurant__love">heart</div>
+                        </a>
+                    </article>
+                    <article class="restaurant" id="card-le-delice-des-sens">
+                        <a href="#" class="restaurant__link" aria-label="Accédez à la carte - Le délice des sens">
+                            <div class="restaurant__image restaurant__image--4"></div>
+                            <div class="restaurant__description">
+                                <h2 class="restaurant__description__title">Le délice des sens</h2>
+                                <p class="restaurant__description__location">Folie-Méricourt</p>
+                            </div>
+                            <div class="restaurant__love">heart</div>
+                        </a>
+                    </article>
+               
+            </section>
+        </main>
+        <footer>
+            <p class="title-footer__ohmyfood">ohmyfood</p>
+            <div class="information">
+                <a href="#" class="information__link" aria-label="Proposer un restaurant"><span class="link__icon">icon-dishes</span> Proposer un restaurant</a>
+                <a href="#" class="information__link" aria-label="Devenir partenaire"><span class="link__icon">icon partner</span> Devenir partenaire</a>
+                <a href="#" class="information__link" aria-label="Accédez à la page des Mentions légales">Mentions légales</a>
+                <a href="#" class="information__link" aria-label="Contactez-nous !">Contact</a>
+            </div>
+        </footer>  
+    </body>
+</html>
