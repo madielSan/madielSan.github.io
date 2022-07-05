@@ -2,6 +2,7 @@
  # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@import "../_scss/normalize.scss";
 @import "../_scss/base";
 @import "../_scss/restaurant-card";
 

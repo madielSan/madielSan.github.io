@@ -1,6 +1,31 @@
 @import "../_scss/variables.scss";
 
 @mixin lighten-black-font($amount-black-lighten:30%) {
-    color: lighten($color: #000000, $amount: $amount-black-lighten);
-    
+    color: lighten($color: #000000, $amount: $amount-black-lighten); 
+}
+
+
+@mixin pastel-darken-font($color: $grey-background, $background-lightness:5%, $color-lightness: 50%) {
+    background-color: lighten($color: $color, $amount: $background-lightness) ;
+    color: darken($color: $color, $amount: $color-lightness);
+}
+
+@mixin box-shadow {
+    box-shadow: 1px 3px 9px darken($color: $grey-background, $amount: 10%);
+}
+
+@mixin new-restaurant {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 20px;
+    padding: 5px 12px;
+    border-radius: 2px;
+    font-weight: $roboto-bold;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-right: 10px;
+    @include pastel-darken-font($color-tertiary, 0, 38%);
+
 }
