@@ -1,41 +1,147 @@
+@import "../_scss/variables.scss";
+@import "../_scss/functions.scss";
+
 .back-to-homepage {
+    position: relative;
+    background-color: #fff;
     display: flex;
-    justify-content: center;
-    padding: 15px 0;
-    margin-left: 30px;
+    padding: 5px 20px;
     &__arrow {
+        flex: 0.6;
         display: flex;
+        align-items: center;
         justify-content: center;
-        align-content: center;
         &__image {
-            width: 25px;
+            width: 50%;
+            height: 50px;
+            background-image: $arrow;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
         }
     }
     &__logo {
-        flex: 3;
+        flex: 6;
         display: flex;
+        align-items: center;
         justify-content: center;
-        align-content: center;
-        padding: 0 50px;
         &__image {
-            width: 80%;
+            width: 50%;
+            height: 50px;
+            background-image: $logo;
+            @include basic-svg;
         }
     }
 }
 
-// main {
-//     position: relative;
-// }
-// .restaurant {
-//     border-radius: 50px 50px 0 0;
-//     position: relative;
-//     margin: 0;
-//     top: -85px;
-// }
+.restaurant {
+    background-color: $light-grey-background;
+    &__img-container{
+        &--la-note {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            max-height: 350px;
+        }
+        &__image {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
 
-// .container-restaurant {
-//     width: 100%;
-//     &__image {
-//         width: 100%;
-//     }
-// }
+
+.carte {
+    background-color: $light-grey-background;
+    border-radius: 50px 50px 0 0;
+    position: relative;
+    top: -50px;
+    padding: 20px;
+    &__title {
+    display: flex;
+    align-items: center;
+    &__name{
+        flex: 9;
+        font-family: $shrik;
+        font-size: 1.6rem;
+    }
+    &__love {
+        flex: 1;
+        height: 30px;
+        @include basic-svg;
+        margin-right: 15px;
+        }
+    } 
+}
+
+.dish-part {
+    &__title {
+        display: flex;
+        flex-direction: column;
+        @include pastel-darken-font();
+        font-weight: $roboto-middle;
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        &::after {
+        content:"______";
+        position: relative;
+        top: -12px;
+        font-weight: $roboto-black;
+        color: $color-tertiary;
+        }
+    }
+}
+
+.dish {
+    height: 60px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 5px;
+    &:nth-of-type(1){
+        margin-top: 0;
+    }
+    &__link {
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        &__name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.2rem;
+            margin: 5px;
+            margin-bottom: 0;
+        }
+        &__condiments {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1rem;
+            margin: 5px;
+            margin-bottom: 0;
+        }
+    }
+    &__price {
+        font-weight: $roboto-bold;
+        align-self: flex-end;
+        margin-right: 15px;
+        margin-bottom: 0px;
+    }
+    &__validate {
+       display: none;
+    }
+}
+
+.command {
+    display: flex;
+    justify-content: center;
+}
+

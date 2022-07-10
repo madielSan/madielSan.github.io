@@ -1,0 +1,23 @@
+// FOOTER
+.footer {
+    background-color: darken($color: $grey-background, $amount: 65%);
+    color: #fff;
+    padding: 10px 30px;
+    &__oh-my-food {
+        font-family: $shrik;
+        font-size: 1.2rem;
+    }
+    &__information {
+        display: flex;
+        flex-direction: column;
+        &__link {
+            text-decoration: none;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            &__icon {
+                margin-right: 5px;
+            }
+        }
+    }
+}

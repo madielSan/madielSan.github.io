@@ -1,0 +1,12 @@
+.omf-type-button {
+    width: 60%;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    padding: 15px 0;
+    margin: 10px 0 15px;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    box-shadow: 4px 4px 8px darken($color: $grey-background, $amount: 15%);
+}

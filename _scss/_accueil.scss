@@ -44,18 +44,6 @@
         margin-top: 10px;
         @include lighten-black-font(50%);
     }
-    &__explorer-button {
-        width: 60%;
-        border: none;
-        border-radius: 30px;
-        font-size: 1rem;
-        cursor: pointer;
-        color: #fff;
-        padding: 15px 0;
-        margin: 10px 0 15px;
-        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-        box-shadow: 4px 4px 8px darken($color: $grey-background, $amount: 15%);
-    }
 }
 
 
@@ -128,16 +116,32 @@
         background-position: center;
         background-repeat: no-repeat;
         &--1 {
-            background-image: $palette-du-gout;
+            background-image: $palette-du-gout-mobile;
         }
         &--2 {
-            background-image: $note-enchantee;
+            background-image: $note-enchantee-mobile;
         }
         &--3 {
-            background-image:$a-la-francaise;
+            background-image:$a-la-francaise-mobile;
         }
         &--4 {
-            background-image: $le-delice-des-sens;
+            background-image: $le-delice-des-sens-mobile;
+        }
+
+        @media (min-width: 992px) {
+            &--1 {
+                background-image: $palette-du-gout-medium;
+            }
+            &--2 {
+                background-image: $note-enchantee-medium;
+            }
+            &--3 {
+                background-image:$a-la-francaise-medium;
+            }
+            &--4 {
+                background-image: $le-delice-des-sens-medium;
+            }
+            
         }
     }
 
@@ -150,45 +154,22 @@
         color: #000;
         &__title
         {   
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             margin-bottom: 0;
         }
         &__location {
-            font-size: 1.3rem;
+            font-size: 1rem;
             margin-top: 0;
             margin-bottom: 10px;
         }
     }
     &__love {
         flex: 1;
-        font-size: 30px;
-        text-align: center;
-        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include basic-svg;
         color: #000;
     }
 }
 
-// FOOTER
-
-.footer {
-    background-color: darken($color: $grey-background, $amount: 65%);
-    color: #fff;
-    padding: 10px 30px;
-    &__oh-my-food {
-        font-family: 'Shrikhand';
-        font-size: 1.2rem;
-    }
-    &__information {
-        display: flex;
-        flex-direction: column;
-        &__link {
-            text-decoration: none;
-            color: #fff;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            &__icon {
-                margin-right: 5px;
-            }
-        }
-    }
-}

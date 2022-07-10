@@ -5,137 +5,150 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>La palette du goût - Menu | Oh-my-food !</title>
+        <!-- INTEGRATION DU CDN FONT AWESOME  -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!-- Favicon --> <!--  -->
+        <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+        <link href="/css/pages-menu.css" rel="stylesheet">
     </head>
     <body>
         <header>
-            <div class="back-to-homepage-container">
-                <a class="back-to-homepage" href="#">flèche retour</a>
-            </div>
-            <div class="logo-container">
-                <img class="logo-header" src="../images/logo/ohmyfood.png" alt="oh-my-food logo">
+            <div class="back-to-homepage">
+                <a class="back-to-homepage__arrow" href="index.html">
+                    <div class="back-to-homepage__arrow__image"></div>
+                </a>
+                <div class="back-to-homepage__logo">
+                    <div class="back-to-homepage__logo__image"></div>
+                </div>
             </div>
         </header>
-        <main>
-            <img class="resto-food-image" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat savoureux - La palette du goût">
-            <section class="a-la-carte-container">
-                <div class="a-la-carte-title-container">
-                    <h1 class="a-la-carte-title">La palette du goût</h1>
-                    <div class="love-icon-menu">heart</div>
+        <main class="restaurant">
+            <div class="restaurant__img-container">
+                <picture>
+                    <source media="(max-width:768px)" srcset="../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash-1080.jpg">
+                    <source srcset="../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash-1920.jpg">
+                    <img class="restaurant__img-container__image" src="../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat savoureux - La palette du goût">
+                </picture>
+            </div>
+            <section class="carte">
+                <div class="carte__title">
+                    <h1 class="carte__title__name">La palette du goût</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="carte__title__love" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
                 </div>
                 <div class="dish-part">
-                    <h2 class="dish-part-title">ENTRÉES</h2>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Fricassée d'escargot</h2>
-                                <p class="dish-condiments">Au piment d'espelette</p>
+                    <h2 class="dish-part__title">ENTRÉES</h2>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Fricassée d'escargot</h2>
+                                <p class="dish__description__condiments">Au piment d'espelette</p>
                             </div>
-                            <div class="dish-price">25&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
+                            <div class="dish__price">25&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
                         </a>
                     </article>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Foie gras de canard mi-cuit</h2>
-                                <p class="dish-condiments">Et ses copeaux de truffe noire</p>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Foie gras de canard mi-cuit</h2>
+                                <p class="dish__description__condiments">Et ses copeaux de truffe noire</p>
                             </div>
-                            <div class="dish-price">35&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
+                            <div class="dish__price">35&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
                         </a>
                     </article>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Oeuf au plat</h2>
-                                <p class="dish-condiments">Assaisonné à la truffe sur lit de chanterelles</p>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Oeuf au plat</h2>
+                                <p class="dish__description__condiments">Assaisonné à la truffe sur lit de chanterelles</p>
                             </div>
-                            <div class="dish-price">20&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
-                        </a>
-                    </article>
-                </div>
-                <div class="dish-part">
-                    <h2 class="dish-part-title">PLATS</h2>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Filet de boeuf aux herbes</h2>
-                                <p class="dish-condiments">Accompagné de sa ribambelle de légumes poêlés</p>
-                            </div>
-                            <div class="dish-price">40&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
-                        </a>
-                    </article>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Parmentier de queue de boeuf</h2>
-                                <p class="dish-condiments">À la truffe noire sur sa purée de panais</p>
-                            </div>
-                            <div class="dish-price">35&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
-                        </a>
-                    </article>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Filet de Turbot</h2>
-                                <p class="dish-condiments">Aux agrumes</p>
-                            </div>
-                            <div class="dish-price">44&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
+                            <div class="dish__price">20&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
                         </a>
                     </article>
                 </div>
                 <div class="dish-part">
-                    <h2 class="dish-part-title">DESSERTS</h2>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Paris-Brest</h2>
-                                <p class="dish-condiments">Revisité</p>
+                    <h2 class="dish-part__title">PLATS</h2>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Filet de boeuf aux herbes</h2>
+                                <p class="dish__description__condiments">Accompagné de sa ribambelle de légumes poêlés</p>
                             </div>
-                            <div class="dish-price">18&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
+                            <div class="dish__price">40&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
                         </a>
                     </article>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Macaron au chocolat d'exception</h2>
-                                <p class="dish-condiments">Et glace à la vanille de Madagascar</p>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Parmentier de queue de boeuf</h2>
+                                <p class="dish__description__condiments">À la truffe noire sur sa purée de panais</p>
                             </div>
-                            <div class="dish-price">22&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
+                            <div class="dish__price">35&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
                         </a>
                     </article>
-                    <article class="dish-card">
-                        <a class="dish-card-link" href="#">
-                            <div class="dish-card-description">
-                                <h2 class="dish-name">Mousse au chocolat</h2>
-                                <p class="dish-condiments">Au piment d'espelette et à la truffe noire</p>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Filet de Turbot</h2>
+                                <p class="dish__description__condiments">Aux agrumes</p>
                             </div>
-                            <div class="dish-price">23&euro;</div>
-                            <div class="dish-validate-animation">validate animation(css)</div>
+                            <div class="dish__price">44&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
                         </a>
                     </article>
                 </div>
-                <div class="command-button-container">
-                    <button class="command-button" type="button">Commander</button>
+                <div class="dish-part">
+                    <h2 class="dish-part__title">DESSERTS</h2>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Paris-Brest</h2>
+                                <p class="dish__description__condiments">Revisité</p>
+                            </div>
+                            <div class="dish__price">18&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
+                        </a>
+                    </article>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Macaron au chocolat d'exception</h2>
+                                <p class="dish__description__condiments">Et glace à la vanille de Madagascar</p>
+                            </div>
+                            <div class="dish__price">22&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
+                        </a>
+                    </article>
+                    <article class="dish">
+                        <a class="dish__link" href="#">
+                            <div class="dish__description">
+                                <h2 class="dish__description__name">Mousse au chocolat</h2>
+                                <p class="dish__description__condiments">Au piment d'espelette et à la truffe noire</p>
+                            </div>
+                            <div class="dish__price">23&euro;</div>
+                            <div class="dish__validate dish--animation">validate animation(css)</div>
+                        </a>
+                    </article>
+                </div>
+                <div class="command">
+                    <button class="omf-type-button" type="button">Commander</button>
                 </div>
             </section>
         </main>
-        <footer>
-            <h1 class="title-footer">
-                <img class="logo-footer" src="../images/logo/ohmyfood@2x.svg" alt="oh-my-food logo">
-            </h1>
-            <div class="links-information-container">
-                <a href="#" class="link-footer"><span class="footer-icon">icon-dishes</span> Proposer un restaurant</a>
-                <a href="#" class="link-footer"><span class="footer-icon">icon partner</span> Devenir partenaire</a>
-                <a href="#" class="link-footer">Mentions légales</a>
-                <a href="#" class="link-footer">Contact</a>
+        <footer class="footer">
+            <p class="footer__oh-my-food">ohmyfood</p>
+            <div class="footer__information">
+                <a href="#" class="footer__information__link" aria-label="Proposer un restaurant"><span class="footer__information__link__icon"><i class="fa-solid fa-utensils"></i></span> Proposer un restaurant</a>
+                <a href="#" class="footer__information__link" aria-label="Devenir partenaire"><span class="footer__information__link__icon"><i class="fa-solid fa-handshake-angle"></i></span> Devenir partenaire</a>
+                <a href="#" class="footer__information__link" aria-label="Accédez à la page des Mentions légales">Mentions légales</a>
+                <a href="#" class="footer__information__link" aria-label="Contactez-nous !">Contact</a>
             </div>
-        </footer>
+        </footer>  
     </body>
 </html>
