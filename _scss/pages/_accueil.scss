@@ -1,5 +1,5 @@
-@import "../_scss/variables.scss";
-@import "../_scss/functions.scss";
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
 // Header ------------------------
 
 .logo-container {
@@ -11,7 +11,6 @@
     }
 }
 //  User Location zone
-
 .user-location {
     display: flex;
     justify-content: center;

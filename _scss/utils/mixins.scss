@@ -1,4 +1,4 @@
-@import "../_scss/variables.scss";
+@import "variables.scss";
 
 @mixin lighten-black-font($amount-black-lighten:30%) {
     color: lighten($color: #000000, $amount: $amount-black-lighten); 

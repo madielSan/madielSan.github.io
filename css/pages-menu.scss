@@ -2,8 +2,8 @@
  # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@import "../_scss/normalize.scss";
-@import "../_scss/base";
-@import "../_scss/pages-menu";
-@import "../_scss/button";
-@import "../_scss/footer";
+@import "../_scss/base/normalize";
+@import "../_scss/base/base";
+@import "../_scss/pages/pages-menu";
+@import "../_scss/components/button";
+@import "../_scss/layouts/footer";
