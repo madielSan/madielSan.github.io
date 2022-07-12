@@ -1,0 +1,49 @@
+@media (min-width: 768px) and (max-width: 992px) { 
+
+    .back-to-homepage {
+        &__arrow {
+            &__image {
+               height: 40px !important;
+            }
+        }
+    }
+    .restaurant {
+        background-color: #fff !important;
+        &__img-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &--la-note {
+                overflow: hidden;
+            }
+        }
+    } 
+
+    .carte {
+        width: 80%;
+        top: -100px !important;
+        margin: auto;
+        border-radius: 50px !important;
+        @include box-shadow
+    }
+
+    .dish-part {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+        &__title {
+            text-align: center;
+        }
+    }
+
+    .dish {
+        margin-right: 8px !important;
+        &__price{
+            margin-left: 5px !important;
+        }
+    }
+    .command {
+        margin-top: 50px;
+    }
+}

@@ -21,3 +21,24 @@
         }
     }
 }
+
+@media (min-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__oh-my-food {
+            font-size: 1.5rem ;
+            margin-bottom: 0;
+        }
+        &__information {
+        width: 85%;
+        margin: 40px auto;
+        flex-direction: row;
+        justify-content: space-around;
+        &__link {
+            margin-right: 20px;
+        }
+        }
+    } 
+}

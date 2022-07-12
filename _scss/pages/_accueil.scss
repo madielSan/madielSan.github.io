@@ -1,5 +1,6 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
+@import "responsive/accueil-desktop&tab";
 // Header ------------------------
 
 .logo-container {
@@ -40,6 +41,7 @@
     }
     &__description {
         font-size: 1.15rem;
+        padding: 0 15px;
         margin-top: 10px;
         @include lighten-black-font(50%);
     }
@@ -51,11 +53,15 @@
 .operation {
     margin-left: 15px;
     margin-bottom: 60px;
+    &__title {
+        font-size: 1.7rem;
+    }
     &__block {
         @include pastel-darken-font();
         display: flex;
         align-items: center;
-        margin: 30px 10px;
+        margin: 30px 15px;
+        padding-right: 15px;
         border-radius: 25px;
         height: 75px;
         @include box-shadow;
@@ -78,18 +84,25 @@
         &__description {
             color: #000;
             font-weight: $roboto-bold;
-            font-size: 18px;
-            margin-left: 15px;
+            font-size: 1.1rem;
+            margin: 0 15px;
         }
     }
 
 }
 // STYLE CARTE PRESENTATION RESTAURANT
 .restaurants {
+    display: flex;
+    flex-direction: column;
     background-color: $light-grey-background;
-    padding: 30px 25px;
+    padding: 30px 0;
     &__title {
+        padding-left: 30px;
         margin-bottom: 15px;
+    }
+    &__container{
+        width: 95%;
+        align-self: center;
     }
 }
 .restaurant {
