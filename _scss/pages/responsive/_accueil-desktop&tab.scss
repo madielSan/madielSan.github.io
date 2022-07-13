@@ -2,6 +2,13 @@
 
 @media (min-width: 768px) {
 
+    .logo-container__header-logo {
+        width: 250px !important;
+    }
+    .user-location__city {
+        font-size: 1.2rem !important;
+    }
+
     .operation {
         display: flex;
         flex-wrap: wrap;

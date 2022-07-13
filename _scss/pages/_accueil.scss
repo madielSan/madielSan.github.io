@@ -23,6 +23,7 @@
         margin-right: 20px;
     }
     &__city {
+        font-size: 1rem;
         font-weight: $roboto-bold;
     }
 }
@@ -30,6 +31,8 @@
 // Description zone
 
 .homepage-description {
+    display: flex;
+    flex-direction: column;
     background: lighten($color: $grey-background, $amount: 5%);
     text-align: center;
     padding: 40px 0;
