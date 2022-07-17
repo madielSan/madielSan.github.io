@@ -1,0 +1,40 @@
+.love {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include basic-svg;
+    color: #000;
+    position: relative;
+    &__heart {
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        width: 100%;
+        &:hover {
+            z-index: 1;
+        }
+        &--full {
+            position: absolute;
+            z-index: 1;
+            fill:url(#gradiant-heart--1) and url(#gradiant-heart--2) and url(#gradiant-heart--3) and url(#gradiant-heart--4);
+            stroke: url(#gradiant-heart--1) and url(#gradiant-heart--2) and url(#gradiant-heart--3) and url(#gradiant-heart--4);
+            opacity: 0;
+            @include scale-hover;
+            transition: all 400ms ease-in-out;
+            &:hover { 
+                transform: scale(1.15);
+                z-index: 2;
+                opacity: 100;
+            }
+        }
+    }
+}
+
+.stop1 {
+    stop-color: $color-primary;
+}
+
+.stop2 {
+    stop-color: $color-secondary;
+}

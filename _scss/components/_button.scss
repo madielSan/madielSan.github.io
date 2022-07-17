@@ -1,13 +1,21 @@
+// Style primaire des boutons du site
 .omf-type-button {
-   max-width: 350px;
-    width: 60%;
+   max-width: 300px;
+    width: 50%;
     margin: auto;
     border: none;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    font-weight: map-get($roboto-weight, regular);
     color: #fff;
     padding: 15px;
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    box-shadow: 4px 4px 8px darken($color: $grey-background, $amount: 15%);
+    background: $gradiant-primary-secondary;
+    // box-shadow: 4px 4px 8px darken($color: $grey-background, $amount: 15%);
+    @include dark-box-shadow($grey-background, 30%);
+    @include scale-hover(1.05);
+    transition: all 300ms ease-in-out;
+    &:hover{
+        @include light-box-shadow(#000, 50%, 2px 4px 11px)
+    }
 }

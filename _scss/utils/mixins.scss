@@ -10,8 +10,12 @@
     color: darken($color: $color, $amount: $color-lightness);
 }
 
-@mixin box-shadow {
-    box-shadow: 1px 3px 9px darken($color: $grey-background, $amount: 10%);
+@mixin dark-box-shadow($color: $grey-background, $amount: 10%, $shadow: 1px 2px 9px){
+    box-shadow: $shadow darken($color: $color, $amount: $amount);
+}
+
+@mixin light-box-shadow($color: $grey-background, $amount: 10%, $shadow: 1px 2px 9px){
+    box-shadow: $shadow lighten($color: $color, $amount: $amount);
 }
 
 @mixin new-restaurant {
@@ -22,7 +26,7 @@
     height: 20px;
     padding: 5px 12px;
     border-radius: 2px;
-    font-weight: $roboto-bold;
+    font-weight: map-get($roboto-weight, bold);
     font-size: 0.9rem;
     text-align: center;
     margin-right: 10px;
@@ -35,3 +39,12 @@
     background-size: contain;
     background-position: center;
 }
+
+@mixin scale-hover($scale:1.10) {
+    transform: scale(1);
+    transition: transform 300ms;
+    &:hover {
+        transform: scale($scale);
+    }
+}
+

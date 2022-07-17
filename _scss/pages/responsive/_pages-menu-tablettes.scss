@@ -24,7 +24,12 @@
         top: -100px !important;
         margin: auto;
         border-radius: 50px !important;
-        @include box-shadow
+        @include dark-box-shadow;
+        &__title {
+            &__name {
+                margin-left: 20px;
+            }
+        }
     }
 
     .dish-part {
@@ -45,5 +50,6 @@
     }
     .command {
         margin-top: 50px;
+        margin-bottom: 50px;
     }
 }

@@ -1,44 +1,60 @@
-// Variables de couleurs
-
+// Variables des couleurs principales.
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$grey-background: #eaeaea;
-$light-grey-background: lighten($grey-background, 5%);
+$grey-background: #eaeaea; //gris foncé utilisé dans la localisation de l'utilisateur.
+$light-grey-background: lighten($grey-background, 5%); // gris clair utilisé pour le reste des éléments di site (sections, restaurants, menus...)
 
-// Variables pour le font-weight police Roboto
+// Variable pour le font-weight police Roboto
+$roboto-weight:
+(
+    bolder: 900,
+    bold: 700,
+    regular: 500,
+    middle: 400,
+    light: 300 
+);
 
-$roboto-black: 900;
-$roboto-bold: 700;
-$roboto-regular:500;
-$roboto-middle: 400;
-$roboto-light: 300;
+$gradiant-primary-secondary:linear-gradient(to bottom right, $color-secondary, $color-primary);
 
 // Variables polices
-
 $shrik: 'Shrikhand';
 
 // Variables logo et icones
-
 $logo: url("../images/logo/ohmyfood.png");
 $arrow: url("../images/icon/arrow-left-solid.svg");
 $heart: url("../images/icon/thin-heart.svg");
 
-//  Variables images restaurants originales
-$palette-du-gout: url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-$note-enchantee: url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash.jpg");
-$a-la-francaise: url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-$le-delice-des-sens:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-//Format Desktop & tablettes (largeur 1920px)
-$palette-du-gout-medium: url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash-1920.jpg");
-$note-enchantee-medium: url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash-1920.jpg");
-$a-la-francaise-medium: url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash-1920.jpg");
-$le-delice-des-sens-medium:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1920.jpg");
-// Format Mobile (largeur 1080px)
-$palette-du-gout-mobile: url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash-1080.jpg");
-$note-enchantee-mobile: url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash-1080.jpg");
-$a-la-francaise-mobile: url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash-1080.jpg");
-$le-delice-des-sens-mobile:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1080.jpg");
+
+$la-palette-du-gout:
+(
+    original:url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash.jpg"), //  Variables images restaurants originales
+    medium:url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash-1920.jpg"), //Format Desktop & tablettes (largeur 1920px)
+    mobile:url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash-1080.jpg") // Format Mobile (largeur 1080px)
+);
+
+$la-note-enchantee:
+(
+    original:url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash.jpg"),
+    medium: url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash-1920.jpg"),
+    mobile:url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash-1080.jpg")
+);
+
+$a-la-francaise:
+(
+    original:url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash.jpg"),
+    medium:url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash-1920.jpg"),
+    mobile:url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash-1080.jpg")
+);
+
+$le-delice-des-sens:
+(
+    original:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"),
+    medium:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1920.jpg"),
+    mobile:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1080.jpg")
+);
+
+
 
 
 
