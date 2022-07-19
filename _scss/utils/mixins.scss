@@ -48,3 +48,7 @@
     }
 }
 
+@mixin gradiant-color($color1, $color2) {
+   color: linear-gradient(to bottom right, $color1, $color2);
+    
+}
