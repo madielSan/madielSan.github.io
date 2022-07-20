@@ -10,11 +10,18 @@
     &__information {
         display: flex;
         flex-direction: column;
+        z-index: 1;
         &__link {
+            z-index: 2;
             text-decoration: none;
             color: #fff;
             margin-bottom: 10px;
             font-size: 1.1rem;
+            transition: all 100ms linear;
+            margin-left: 5px;
+            &:hover {
+                text-decoration: underline;
+            }
             &__icon {
                 margin-right: 5px;
             }

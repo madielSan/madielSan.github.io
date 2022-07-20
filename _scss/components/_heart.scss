@@ -8,15 +8,15 @@
     position: relative;
     &__heart {
         position: absolute;
-        z-index: 2;
+        flex: 1;
         cursor: pointer;
         width: 100%;
         &:hover {
-            z-index: 1;
+            flex: 0;
         }
-        &--full {
+        &--full  {
             position: absolute;
-            z-index: 1;
+            flex: 0;
             fill:url(#gradiant-heart--1) and url(#gradiant-heart--2) and url(#gradiant-heart--3) and url(#gradiant-heart--4);
             stroke: url(#gradiant-heart--1) and url(#gradiant-heart--2) and url(#gradiant-heart--3) and url(#gradiant-heart--4);
             opacity: 0;
@@ -24,7 +24,7 @@
             transition: all 400ms ease-in-out;
             &:hover { 
                 transform: scale(1.15);
-                z-index: 2;
+                flex: 1;
                 opacity: 100;
             }
         }
