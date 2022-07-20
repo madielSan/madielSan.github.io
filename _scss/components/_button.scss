@@ -11,7 +11,7 @@
     color: #fff;
     padding: 15px;
     background: $gradiant-primary-secondary;
-    // box-shadow: 4px 4px 8px darken($color: $grey-background, $amount: 15%);
+    cursor: pointer;
     @include dark-box-shadow($grey-background, 30%);
     @include scale-hover(1.05);
     transition: all 300ms ease-in-out;
