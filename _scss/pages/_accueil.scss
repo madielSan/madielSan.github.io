@@ -1,6 +1,21 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
 @import "responsive/accueil-desktop&tab";
+
+body {
+    animation: loading-no-scroll 3000ms ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loading-no-scroll {
+    0% {
+        overflow: hidden;
+    }
+         100% {
+        overflow: visible;
+    } 
+}
+
 // Header ------------------------
 
 .logo-container {
@@ -60,15 +75,20 @@
     }
     &__block {
         @include pastel-darken-font();
+        cursor: pointer;
         display: flex;
         align-items: center;
         margin: 30px 15px;
         padding-right: 15px;
         border-radius: 25px;
         height: 75px;
+        transform: scale(1);
         @include dark-box-shadow;
-        &--light-primary {
+        transition: all 400ms ease-in-out;
+        &:hover {
             @include pastel-darken-font($color-primary, 35%, 0%);
+            @include dark-box-shadow($grey-background, 20%);
+            transform: scale(1.03);
         }
         &__step {
             background-color: $color-primary;

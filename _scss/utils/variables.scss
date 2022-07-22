@@ -57,5 +57,16 @@ $le-delice-des-sens:
 
 
 
-
+$number-dish: 10;
+$number-part: 3;
+$anim-duration: 
+(
+    dish:2000ms,
+    part:1000ms
+);
+$anim-delay: 
+(
+    dish:map-get($anim-duration, dish) / $number-dish,
+    part:map-get($anim-duration, part)  / $number-part
+);
 

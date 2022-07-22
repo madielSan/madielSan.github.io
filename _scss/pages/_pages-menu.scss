@@ -77,34 +77,51 @@
 }
 
 .dish-part {
+    margin-top: 40px;
+    &:nth-of-type(1) {
+        margin-top: auto;
+    }
     &__title {
-        display: flex;
-        flex-direction: column;
-        @include pastel-darken-font();
-        font-weight:map-get($roboto-weight, middle);
-        font-size: 1.1rem;
-        margin-bottom: 0;
-        &::after {
-        content:"______";
-        position: relative;
-        top: -12px;
-        font-weight:map-get($roboto-weight, bolder);
-        color: $color-tertiary;
+        opacity: 0;
+        animation: fade 1000ms ease-in-out 1 forwards;
+        @for $i from 1 through $number-part {
+            &--#{$i} {
+                margin-bottom: 5px;
+                margin-left: 5px;
+                animation-delay: map-get($anim-delay, part) * $i;
+                display: flex;
+                flex-direction: column;
+                @include pastel-darken-font();
+                font-weight:map-get($roboto-weight, middle);
+                font-size: 1.1rem;
+                &::after {
+                content:"______";
+                position: relative;
+                top: -12px;
+                color: $color-tertiary;
+                }
+            }
         }
     }
 }
 
-
-
 .dish {
     height: 75px;
     background-color: #fff;
+    opacity: 0;
     border-radius: 15px;
     margin: 20px 0;
     @include dark-box-shadow;
+    animation: fade 2000ms ease-in-out 1 forwards, appear 1000ms linear 1 forwards;
+    @for $i from 1 through $number-dish {
+        &--#{$i} {
+            animation-delay: map-get($anim-delay, dish) * $i;
+        }
+    }
     &:nth-of-type(1){
         margin-top: 0;
     }
+
     &__link {
         height: 100%;
         text-decoration: none;
@@ -155,10 +172,9 @@
         justify-content: center;
         transition: all 600ms ease-in-out;
         &__icon {
-            visibility: hidden;
+            overflow: hidden;
             color: #fff;
             transition: all 600ms linear;
-            font-weight:map-get($roboto-weight, bold);
         }
   
     }
@@ -167,45 +183,49 @@
         height: 100%;
         &__icon {
             background-color: $color-tertiary;
-            visibility: visible;
+            overflow: visible;
             font-size: 30px;
             animation: rotate 400ms ease-in-out 1 forwards;
         }
     }
 }
 
-  @keyframes rotate {
-     0% {
-        transform: rotate(0deg);
-    }
-     100% {
-        transform: rotate(360deg);
-     }
-  }
-
 
 .command {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-   
+    margin-top: 80px;
+    margin-bottom: 80px ;
+    animation: fade 5000ms ease-in-out 1 forwards;
 }
 
-@keyframes slide {
+@keyframes rotate {
     0% {
-
-    }
-
+       transform: rotate(0deg);
+   }
     100% {
-        flex: 2.5;
-        height: 100%;
-        position: relative;
-        left: 0;
-        border-radius: 0 15px 15px 0;
-        background-color: $color-tertiary;
+       transform: rotate(360deg);
     }
+ }
 
+ @keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+     100% {
+        opacity: 100%;
+     }
+    
+ }
+
+@keyframes appear {
+    0% {
+        transform: translateY(20%);
+    }
+     50% {
+        transform: translateY(0%);
+     }
+     100% {
+        transform: translateY(2%);
+     }
 }
-
-
-

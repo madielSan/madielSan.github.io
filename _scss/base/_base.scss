@@ -4,16 +4,4 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto';
     z-index: 5;
-    animation: loading-no-scroll 3000ms ease-in-out 1;
-    animation-fill-mode: forwards;
-}
-
-
-@keyframes loading-no-scroll {
-    0% {
-        overflow: hidden;
-    }
-         100% {
-        overflow: visible;
-    } 
 }

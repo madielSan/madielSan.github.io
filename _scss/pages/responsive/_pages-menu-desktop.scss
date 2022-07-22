@@ -43,8 +43,13 @@
     .dish-part {
         display: flex;
         flex-direction: column;
+        margin-top: 0px !important;
+        margin-right: 25px !important;
+        &:nth-of-type(3) {
+            margin-right: 0px !important;
+        }
         &__title {
-            margin-bottom: 20px !important;
+            margin-bottom: 10px !important;
             text-align: center;
         }
         
