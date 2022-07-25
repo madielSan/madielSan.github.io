@@ -1,46 +1,50 @@
-@import "./utils/variables.scss";
-@import "./utils/mixins.scss";
-@import "responsive/pages-menu-tablettes";
-@import "responsive/pages-menu-desktop";
+@import "./utils/variables";
+@import "./utils/mixins";
 
 .back-to-homepage {
     position: relative;
     background-color: #fff;
     display: flex;
-    padding: 5px 20px;
+    padding: 15px 20px;
     &__arrow {
-        flex: 0.6;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 15%;
+        @include tablettes{width: 10%;}   
+        margin: auto;
         &__image {
-            width: 50%;
-            height: 50px;
+            height: 30px;
+            @include tablettes{height: 45px;}
             background-image: $arrow;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            @include basic-img;
         }
     }
-    &__logo {
-        flex: 6;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &__image {
-            width: 50%;
-            height: 50px;
-            background-image: $logo;
-            @include basic-svg;
-        }
+    &__omf-logo{
+        width: 90%;
+        font-family: $shrik;
+        font-size: 35px;
+        margin-right: 35px;
+        @include tablettes{font-size: 45px; margin-right: 70px;}
+        text-align: center;
+        @include basic-img;
     }
 }
-
-
 .restaurant {
     background-color: $light-grey-background;
+    @include tablettes {
+        background-color: #fff
+    };
     &__img-container{
+        @include tablettes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 550px ;
+            overflow: hidden;
+        }
         &--la-note {
+            @include tablettes {
+                overflow: hidden;
+                max-height: 550px;
+            }
             display: flex;
             justify-content: center;
             align-items: center;
@@ -52,13 +56,23 @@
         }
     }
 }
-
 .carte {
     background-color: $light-grey-background;
     border-radius: 50px 50px 0 0;
     position: relative;
     top: -50px;
     padding: 20px;
+    @include tablettes {
+        width: 80%;
+        top: -100px;
+        margin: auto;
+        border-radius: 50px;
+        @include dark-box-shadow;
+    }
+    @include desktop {
+        width: 90%;
+        top: -120px;
+    }
     &__title {
     display: flex;
     align-items: center;
@@ -66,45 +80,62 @@
         flex: 9;
         font-family: $shrik;
         font-size: 1.6rem;
+        @include tablettes {
+            margin-left: 20px;
+        }
     }
     &__love {
         flex: 1;
         height: 30px;
-        @include basic-svg;
+        @include basic-img;
         margin-right: 15px;
         }
     } 
 }
-
+.dishes {
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
 .dish-part {
     margin-top: 40px;
     &:nth-of-type(1) {
         margin-top: auto;
     }
+    @include tablettes {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+    @include desktop {
+        width: auto;
+        margin: 0 10px;
+
+    }
     &__title {
         opacity: 0;
-        animation: fade 1000ms ease-in-out 1 forwards;
-        @for $i from 1 through $number-part {
-            &--#{$i} {
-                margin-bottom: 5px;
-                margin-left: 5px;
-                animation-delay: map-get($anim-delay, part) * $i;
-                display: flex;
-                flex-direction: column;
-                @include pastel-darken-font();
-                font-weight:map-get($roboto-weight, middle);
-                font-size: 1.1rem;
-                &::after {
-                content:"______";
-                position: relative;
-                top: -12px;
-                color: $color-tertiary;
-                }
-            }
+        @include tablettes {text-align: center;}
+        @include desktop {margin-bottom: 10px;}
+        @include animation(fade, 1000ms, ease-in-out);
+        @include cascade-animation(part){               
+            margin-bottom: 5px;
+            margin-left: 5px; 
+            display: flex;
+            flex-direction: column;
+            @include pastel-darken-font();
+            font-weight:map-get($roboto-weight, middle);
+            font-size: 1.1rem;
+            &::after {
+            content:"______";
+            position: relative;
+            top: -12px;
+            color: $color-tertiary;};
         }
     }
 }
-
 .dish {
     height: 75px;
     background-color: #fff;
@@ -112,16 +143,14 @@
     border-radius: 15px;
     margin: 20px 0;
     @include dark-box-shadow;
-    animation: fade 2000ms ease-in-out 1 forwards, appear 1000ms linear 1 forwards;
-    @for $i from 1 through $number-dish {
-        &--#{$i} {
-            animation-delay: map-get($anim-delay, dish) * $i;
-        }
-    }
+    @include tablettes { margin-right: 8px;}
+    @include desktop {width: 100%; margin-right: 15px;}
+    @include animation(appear, 1000ms, linear);
+    @include animation(fade, 2000ms, ease-in-out);
+    @include cascade-animation(dish);
     &:nth-of-type(1){
         margin-top: 0;
     }
-
     &__link {
         height: 100%;
         text-decoration: none;
@@ -159,8 +188,10 @@
         align-self: flex-end;
         margin-right: 15px;
         margin-bottom: 10px;
+        @include tablettes {
+            margin-left: 5px;
+        }
     }
-
     &__validate {
         flex: 0;
         width: 0px ;
@@ -176,7 +207,6 @@
             color: #fff;
             transition: all 600ms linear;
         }
-  
     }
     &:hover &__validate {
         flex: 3;
@@ -185,47 +215,15 @@
             background-color: $color-tertiary;
             overflow: visible;
             font-size: 30px;
-            animation: rotate 400ms ease-in-out 1 forwards;
+            @include animation(rotate, 400ms, ease-in-out);
         }
     }
 }
-
-
 .command {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 80px ;
-    animation: fade 5000ms ease-in-out 1 forwards;
-}
-
-@keyframes rotate {
-    0% {
-       transform: rotate(0deg);
-   }
-    100% {
-       transform: rotate(360deg);
-    }
- }
-
- @keyframes fade {
-    0% {
-        opacity: 0%;
-    }
-     100% {
-        opacity: 100%;
-     }
-    
- }
-
-@keyframes appear {
-    0% {
-        transform: translateY(20%);
-    }
-     50% {
-        transform: translateY(0%);
-     }
-     100% {
-        transform: translateY(2%);
-     }
+    margin-top: 65px;
+    margin-bottom: 20px ;
+    @include tablettes {margin-top: 50px; margin-bottom: 50px;}
+    @include animation(fade, 5000ms, ease-in-out);
 }

@@ -3,10 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include basic-svg;
+    @include basic-img;
     color: #000;
     position: relative;
-    &__heart {
+    //icône du coeur vide
+    &__heart  {
         position: absolute;
         flex: 1;
         cursor: pointer;
@@ -14,27 +15,29 @@
         &:hover {
             flex: 0;
         }
+        //icône du coeur rempli
         &--full  {
             position: absolute;
             flex: 0;
+            // les règles "fill" et "stroke" spécifiques au format d'images svg permettent à la bordure et l'intérieur du coeur changer de couleur en lien avec la balise <linearGradiant>
             fill:url(#gradiant-heart--1) and url(#gradiant-heart--2) and url(#gradiant-heart--3) and url(#gradiant-heart--4);
             stroke: url(#gradiant-heart--1) and url(#gradiant-heart--2) and url(#gradiant-heart--3) and url(#gradiant-heart--4);
             opacity: 0;
+            transform: scale(1);
             @include scale-hover;
             transition: all 400ms ease-in-out;
             &:hover { 
-                transform: scale(1.15);
+                transform: scale(1.10);
                 flex: 1;
                 opacity: 100;
             }
         }
     }
 }
-
+// Les couleurs dégradés du remplissage du coeur sont décrites ici, elles proviennent des classes des balises <stop> du svg.
 .stop1 {
     stop-color: $color-primary;
 }
-
 .stop2 {
     stop-color: $color-secondary;
 }

@@ -5,7 +5,13 @@ $color-tertiary: #99E2D0;
 $grey-background: #eaeaea; //gris foncé utilisé dans la localisation de l'utilisateur.
 $light-grey-background: lighten($grey-background, 5%); // gris clair utilisé pour le reste des éléments di site (sections, restaurants, menus...)
 
-// Variable pour le font-weight police Roboto
+
+$breakpoints: 
+(
+    tablette: 768px,
+    desktop: 992px
+);
+// Map pour le font-weight police Roboto
 $roboto-weight:
 (
     bolder: 900,
@@ -15,6 +21,7 @@ $roboto-weight:
     light: 300 
 );
 
+// Variables permettant à la couleur d'un élément d'avoir un effet de dégradé.
 $gradiant-primary-secondary:linear-gradient(to bottom right, $color-secondary, $color-primary);
 $gradiant-secondary-tertiary:linear-gradient(to bottom right, $color-secondary, $color-tertiary);
 
@@ -24,47 +31,44 @@ $shrik: 'Shrikhand';
 // Variables logo et icones
 $logo: url("../images/logo/ohmyfood.png");
 $arrow: url("../images/icon/arrow-left-solid.svg");
-$heart: url("../images/icon/thin-heart.svg");
 
-
+/* Map dédiés aux différents formats d'images afin qu'ils s'adaptent au design responsive du site. 
+    Gain de performances, fluidité du chargement, en allégement du poids des images. */
 $la-palette-du-gout:
 (
     original:url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash.jpg"), //  Variables images restaurants originales
     medium:url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash-1920.jpg"), //Format Desktop & tablettes (largeur 1920px)
     mobile:url("../images/restaurants/la-palette-du-gout/jay-wennington-N_Y88TWmGwA-unsplash-1080.jpg") // Format Mobile (largeur 1080px)
 );
-
 $la-note-enchantee:
 (
     original:url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash.jpg"),
     medium: url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash-1920.jpg"),
     mobile:url("../images/restaurants/la-note-enchantee/stil-u2Lp8tXIcjw-unsplash-1080.jpg")
 );
-
 $a-la-francaise:
 (
     original:url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash.jpg"),
     medium:url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash-1920.jpg"),
     mobile:url("../images/restaurants/a-la-francaise/toa-heftiba-DQKerTsQwi0-unsplash-1080.jpg")
 );
-
 $le-delice-des-sens:
 (
     original:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"),
     medium:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1920.jpg"),
     mobile:url("../images/restaurants/le-delice-des-sens/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1080.jpg")
 );
-
-
-
+// Variables dédiés à l'animation de l'entrée des plats en cascade sur les pages de menu des restaurants
 $number-dish: 10;
 $number-part: 3;
-$anim-duration: 
+$anim-duration:  //Map utilisée pour indiquer la durée d'animation selon les blocs concernés
 (
     dish:2000ms,
     part:1000ms
 );
-$anim-delay: 
+
+ //Map utilisée pour indiquer le délai d'arrivée du contenu pour chaque bloc concerné. Elle fonctionne en divisant la durée de l'animation d'un élément avec le nombre d'élément total.
+$anim-delay:
 (
     dish:map-get($anim-duration, dish) / $number-dish,
     part:map-get($anim-duration, part)  / $number-part

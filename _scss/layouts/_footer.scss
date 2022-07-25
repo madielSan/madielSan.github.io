@@ -1,4 +1,4 @@
-// FOOTER
+// FOOTER VERSION MOBILE
 .footer {
     background-color: darken($color: $grey-background, $amount: 65%);
     color: #fff;
@@ -29,6 +29,7 @@
     }
 }
 
+// FOOTER VERSION DESKTOP ET TABLETTES
 @media (min-width: 768px) {
     .footer {
         display: flex;

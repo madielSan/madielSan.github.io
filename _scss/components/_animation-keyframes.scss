@@ -1,0 +1,343 @@
+// ANIMATIONS POUR LA PAGE D'ACCUEIL
+
+// Empêche la page d'accueil de scroller pendant la phase de chargement.
+@keyframes loading-no-scroll {
+    0% {
+        overflow: hidden;
+    }
+         100% {
+        overflow: visible;
+    } 
+}
+
+@-webkit-keyframes loading-no-scroll {
+    0% {
+        overflow: hidden;
+    }
+         100% {
+        overflow: visible;
+    } 
+}
+
+@-moz-keyframes loading-no-scroll {
+    0% {
+        overflow: hidden;
+    }
+         100% {
+        overflow: visible;
+    } 
+}
+
+@-o-keyframes loading-no-scroll {
+    0% {
+        overflow: hidden;
+    }
+         100% {
+        overflow: visible;
+    } 
+}
+/* ANIMATIONS POUR LE LOAD SPINNER 
+ Permet au bloc contenant le chargement de disparaître à la fin de l'animation.*/
+@keyframes display{
+    0% {
+    z-index: 12;
+    background-color: white;
+    }
+    100% {
+        z-index: 0;
+    } 
+}
+
+@-webkit-keyframes display{
+    0% {
+    z-index: 12;
+    background-color: white;
+    }
+    100% {
+        z-index: 0;
+    } 
+}
+
+@-moz-keyframes display{
+    0% {
+    z-index: 12;
+    background-color: white;
+    }
+    100% {
+        z-index: 0;
+    } 
+}
+
+@-o-keyframes display{
+    0% {
+    z-index: 12;
+    background-color: white;
+    }
+    100% {
+        z-index: 0;
+    } 
+}
+// Permet à la fois la rotation et la disparition du load spinner de manière graduelle
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        z-index: 12;
+        opacity: 100%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        z-index: 0;
+        opacity: 0%;
+    }
+}
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        z-index: 12;
+        opacity: 100%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        z-index: 0; 
+    }
+}
+
+@-moz-keyframes  spin {
+    0% {
+        transform: rotate(0deg);
+        z-index: 12;
+        opacity: 100%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        z-index: 0; 
+    }
+}
+@-o-keyframes  spin {
+    0% {
+        transform: rotate(0deg);
+        z-index: 12;
+        opacity: 100%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        z-index: 0; 
+    }
+}
+// Le logo OHMYFOOD contenu dans le load spinner disparaît lentement jusqu'à la fin de l'animation.
+@keyframes text-visibility {
+    0% {
+       visibility: visible;
+       opacity: 100%;
+    }
+        100% {
+        visibility: hidden; 
+        opacity: 0%;
+    }  
+}
+@-webkit-keyframes text-visibility {
+    0% {
+       visibility: visible;
+       opacity: 100%;
+    }
+        100% {
+        visibility: hidden; 
+        opacity: 0%;
+    }  
+}
+@-moz-keyframes text-visibility {
+    0% {
+       visibility: visible;
+       opacity: 100%;
+    }
+        100% {
+        visibility: hidden; 
+        opacity: 0%;
+    }  
+}
+@-o-keyframes text-visibility {
+    0% {
+       visibility: visible;
+       opacity: 100%;
+    }
+        100% {
+        visibility: hidden; 
+        opacity: 0%;
+    }  
+}
+//  Effet de clignotement du logo pendant le load spinner.
+@keyframes text-zoom {
+    0% {
+       transform: scale(1);
+       opacity: 100%;
+    }
+        50% {
+        transform: scale(1.07);
+    } 
+    100% {
+        transform: scale(1);
+        opacity: 0%;
+    }   
+}
+
+@-webkit-keyframes text-zoom {
+    0% {
+       transform: scale(1);
+       opacity: 100%;
+    }
+        50% {
+        transform: scale(1.07);
+    } 
+    100% {
+        transform: scale(1);
+        opacity: 0%;
+    }   
+}
+
+@-moz-keyframes text-zoom {
+    0% {
+       transform: scale(1);
+       opacity: 100%;
+    }
+        50% {
+        transform: scale(1.07);
+    } 
+    100% {
+        transform: scale(1);
+        opacity: 0%;
+    }   
+}
+
+@-o-keyframes text-zoom {
+    0% {
+       transform: scale(1);
+       opacity: 100%;
+    }
+        50% {
+        transform: scale(1.07);
+    } 
+    100% {
+        transform: scale(1);
+        opacity: 0%;
+    }   
+}
+/* ANIMATIONS POUR LES PAGES DES MENUS RETAURANTS
+Fait apparaître les plats du menu en jouant sur l'opacité. */
+ @keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+     100% {
+        opacity: 100%;
+     }
+    
+ }
+ @-webkit-keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+     100% {
+        opacity: 100%;
+     }
+ }
+ @-moz-keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+     100% {
+        opacity: 100%;
+     }
+ }
+ @-o-keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+     100% {
+        opacity: 100%;
+     } 
+ }
+//  Ajoute un effet de recadrage des plats sur la page durant leur apparition.
+@keyframes appear {
+    0% {
+        transform: translateY(20%);
+    }
+     50% {
+        transform: translateY(0%);
+     }
+     100% {
+        transform: translateY(2%);
+     }
+}
+@-webkit-keyframes appear {
+    0% {
+        transform: translateY(20%);
+    }
+     50% {
+        transform: translateY(0%);
+     }
+     100% {
+        transform: translateY(2%);
+     }
+}
+@-moz-keyframes appear {
+    0% {
+        transform: translateY(20%);
+    }
+     50% {
+        transform: translateY(0%);
+     }
+     100% {
+        transform: translateY(2%);
+     }
+}
+@-o-keyframes appear {
+    0% {
+        transform: translateY(20%);
+    }
+     50% {
+        transform: translateY(0%);
+     }
+     100% {
+        transform: translateY(2%);
+     }
+}
+//  Permet la rotation du logo de validation pendant la transition au survol des plats.
+@keyframes rotate {
+    0% {
+       transform: rotate(0deg);
+   }
+    100% {
+       transform: rotate(360deg);
+    }
+ }
+ @-webkit-keyframes rotate {
+    0% {
+       transform: rotate(0deg);
+   }
+    100% {
+       transform: rotate(360deg);
+    }
+ }
+ @-moz-keyframes rotate {
+    0% {
+       transform: rotate(0deg);
+   }
+    100% {
+       transform: rotate(360deg);
+    }
+ }
+ @-o-keyframes rotate {
+    0% {
+       transform: rotate(0deg);
+   }
+    100% {
+       transform: rotate(360deg);
+    }
+ }
+
+
+

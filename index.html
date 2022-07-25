@@ -11,28 +11,30 @@
         <link rel="stylesheet" type="text/css" href="/css/styles.css">
     </head>
     <body>
+        <!-- LOAD SPINNER -->
         <div class="screen">
             <div class="screen__load-spinner"></div>
             <span class="screen__omf">Oh my food</span>
         </div>
-        <header>
+        <!-- Début du contenu du site -->
+        <header> <!-- La partie header contient le logo du site seulement -->
             <div class="logo-container">
                 <img class="logo-container__header-logo" src="../images/logo/ohmyfood.png" srcset="../images/logo/ohmyfood@2x.svg" alt="oh-my-food logo">
             </div>
         </header>
-
         <main>
+            <!-- La section "user-location" indique le lieu où se trouve l'utilisateur dans un petit encadré gris-->
             <section class="user-location">
                 <span class="user-location__icon"><i class="fa-solid fa-location-dot"></i></span>
                 <h2 class="user-location__city">Paris, Belleville</h2>
             </section>
-
+            <!-- La section "homepage-description" présente l'application -->
             <section class="homepage-description">
                 <h1 class="homepage-description__title">Réservez le menu qui vous convient</h1>
                 <p class="homepage-description__description">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                 <a href="#restaurants" class="omf-type-button">Explorez nos restaurants</a>
             </section>
-
+            <!-- La section "operation" décrit le fonctionnement du système de l'application en 3 étapes découpés en 3 blocs "operation-block"-->
             <section class="operation">
                 <h1 class="operation__title">Fonctionnement</h1>
                 <div class="operation__container">
@@ -53,7 +55,8 @@
                     </div>
                 </div>
             </section>
-
+            <!-- La section "restaurants" représente le contenu centrale de la page.
+             Elle est découpée en 4 articles "restaurant" et forment des "cartes" indépendantes qui, lors du clique, redirigent à la page du restaurant correspondant-->
             <section class="restaurants">
                 <h1 class="restaurants__title" id="restaurants">Restaurants</h1>
                 <div class="restaurants__container">
@@ -66,7 +69,8 @@
                                 <h2 class="restaurant__description__title">La palette du goût</h2>
                                 <p class="restaurant__description__location">Ménilmontant</p>
                             </div>
-                            <div class="love">
+                            <div class="love"> 
+                                 <!-- L'intégration du coeur dans la balise <svg> permet de faciliter son animation en SASS notamment grâce à ses balises spécifiques  -->
                                 <svg xmlns="http://www.w3.org/2000/svg" class="love__heart"  width="30" height="30" viewBox="0 0 24 24" fill="#ffffff" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                                 </svg>
@@ -148,7 +152,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <footer class="footer">  <!-- Le footer est commun à toutes les pages-->
             <p class="footer__oh-my-food">ohmyfood</p>
             <div class="footer__information">
                 <a href="#" class="footer__information__link" aria-label="Proposer un restaurant"><span class="footer__information__link__icon"><i class="fa-solid fa-utensils"></i></span> Proposer un restaurant</a>

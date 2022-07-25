@@ -1,0 +1,85 @@
+@import "variables";
+
+// Mixins qui utilisent les breakpoints pour s'adapter aux versions tablettes et desktop du site et facilite son introduction dans le code.
+@mixin desktop { //desktop brakpoint: 992px
+    @media screen and (min-width:map-get($breakpoints, desktop)){
+    @content;
+    }
+}
+@mixin tablettes { //tablettes breakpoint: 768px
+    @media (min-width:map-get($breakpoints,tablette)){
+    @content;
+    }
+}
+// Mixin permettant de paramétrer le degré d'illumination de la couleur noir.
+@mixin lighten-black-font($amount-black-lighten:30%) {
+    color: lighten($color: #000000, $amount: $amount-black-lighten); 
+}
+//Mixin qui permet à la couleur des caractères sombres de s'adapter par rapport à un fond au type de couleur pastel.
+@mixin pastel-darken-font($color: $grey-background, $background-lightness:5%, $color-lightness: 50%) {
+    background-color: lighten($color: $color, $amount: $background-lightness) ;
+    color: darken($color: $color, $amount: $color-lightness);
+}
+// Mixin qui permet de créer des ombres grise clair par défaut, les paramètres de la box shadow sont entièrement re-paramétrables. 
+@mixin light-box-shadow($color: $grey-background, $amount: 10%, $shadow: 1px 2px 9px){
+    box-shadow: $shadow lighten($color: $color, $amount: $amount);
+}
+// Mixin qui permet de créer des ombres grise foncé par défaut, les paramètres de la box shadow sont entièrement re-paramétrables. 
+@mixin dark-box-shadow($color: $grey-background, $amount: 10%, $shadow: 1px 2px 9px){
+    box-shadow: $shadow darken($color: $color, $amount: $amount);
+}
+
+//Mixin qui décrit la disposition des images de fond sur le site.
+@mixin basic-img($size:contain){
+    background-repeat: no-repeat;
+    background-size: $size;
+    background-position: center;
+}
+
+//Mixin qui permet l'agrandissement d'un élément au survol. Le degré d'agrandissement est paramétrable.
+@mixin scale-hover($scale:1.10) {
+    transform: scale(1);
+    transition: transform 300ms;
+    &:hover {
+        transform: scale($scale);
+    }
+}
+//Mixin qui permet à un élément d'avoir plusieurs couleurs dégradés de bas vers le haut droit. Les couleurs sont paramétrables.
+@mixin gradiant-color($color1, $color2) {
+   color: linear-gradient(to bottom right, $color1, $color2);  
+}
+// Mixin pour paramétrer les animations avec tous les kits d'animation spécifique aux différents principaux navigateurs.
+@mixin animation($animation, $anim-duration, $timing-function) {
+    
+    animation: $animation $anim-duration $timing-function 1 forwards;
+        -webkit-animation: $animation $anim-duration $timing-function 1 forwards;
+        -moz-animation:$animation $anim-duration $timing-function 1 forwards ;
+        -o-animation: $animation $anim-duration $timing-function 1 forwards;
+}
+// Mixin qui permet l'animation en cascade de la page des menus avec tous les kits d'animation spécifiques aux principaux navigateurs.
+@mixin cascade-animation($element) {
+    @for $i from 1 through $number-dish {
+        &--#{$i} {
+            animation-delay: map-get($anim-delay, $element) * $i;
+            -webkit-animation-delay:map-get($anim-delay, $element) * $i;
+            -moz-animation-delay: map-get($anim-delay, $element) * $i;
+            -o-animation-delay: map-get($anim-delay, $element) * $i; 
+            @content; 
+        }
+    }
+}
+//mixin permettant d'adapter les images des restaurants dans leur carte de présentation en page d'accueil.
+@mixin restaurant-image-opti($format) {
+    &--1 {
+        background-image: map-get($la-palette-du-gout, $format);
+    }
+    &--2 {
+        background-image: map-get($la-note-enchantee, $format);
+    }
+    &--3 {
+        background-image: map-get($a-la-francaise, $format);
+    }
+    &--4 {
+        background-image: map-get($le-delice-des-sens, $format);
+    }
+}

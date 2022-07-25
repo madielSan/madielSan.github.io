@@ -1,28 +1,14 @@
-@import "./utils/variables.scss";
-@import "./utils/mixins.scss";
-@import "responsive/accueil-desktop&tab";
+@import "./utils/variables";
+@import "./utils/mixins";
 
-body {
-    animation: loading-no-scroll 3000ms ease-in-out 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes loading-no-scroll {
-    0% {
-        overflow: hidden;
-    }
-         100% {
-        overflow: visible;
-    } 
-}
-
-// Header ------------------------
-
+// Header 
 .logo-container {
     display: flex;
     justify-content: center;
+    padding: 5px 0;
     &__header-logo {
         width: 150px;
+        @include tablettes {width: 250px;}
         margin: 10px 0 10px 25px;
     }
 }
@@ -39,12 +25,11 @@ body {
     }
     &__city {
         font-size: 1rem;
+        @include tablettes {font-size: 1.2rem;}
         font-weight:map-get($roboto-weight, bold);
     }
 }
-
 // Description zone
-
 .homepage-description {
     display: flex;
     flex-direction: column;
@@ -61,17 +46,29 @@ body {
         font-size: 1.1rem;
         padding: 0 15px;
         margin: 10px auto 30px;
-        
         @include lighten-black-font(50%);
     }
 }
-
 // BLOC OPERATION
 .operation {
     margin-left: 15px;
     margin-bottom: 60px;
+    @include tablettes {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
     &__title {
         font-size: 1.5rem;
+        @include tablettes {margin-left: 20px;}
+    }
+    &__container {
+        @include tablettes {
+            width: 100%;
+            margin-left: 15px;
+            display: flex;
+        }
     }
     &__block {
         @include pastel-darken-font();
@@ -84,6 +81,7 @@ body {
         height: 75px;
         transform: scale(1);
         @include dark-box-shadow;
+        @include tablettes {width: 30%; margin: 30px 25px;}
         transition: all 400ms ease-in-out;
         &:hover {
             @include pastel-darken-font($color-primary, 35%, 0%);
@@ -94,7 +92,7 @@ body {
             background-color: $color-primary;
             color: #fff;
             width:15px;
-            height: 15px;
+            height: 14px;
             font-size: 12px;
             text-align: center;
             border-radius:50px;
@@ -108,9 +106,9 @@ body {
             font-weight:map-get($roboto-weight, bold);
             font-size: 1.1rem;
             margin: 0 15px;
+            @include tablettes {width: 100%;text-align: center;}
         }
     }
-
 }
 // ZONE PRESENTATION RESTAURANTS
 .restaurants {
@@ -123,18 +121,28 @@ body {
         font-size: 1.5rem;
         padding-left: 30px;
         margin-bottom: 0;
+        @include tablettes {
+            width: 90%;
+            padding-left: 0;
+            align-self: center;
+        }
     }
     &__container{
         width: 90%;
         margin: auto;
+        @include tablettes {            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 }
-
 // CARTE DE RESTAURANT
 .restaurant {
     background-color: white;
     border-radius: 20px;
     margin: 25px 0;
+    @include tablettes {width: 43%}
     @include dark-box-shadow;
     @include scale-hover(1.05);
     transition: all 300ms;
@@ -147,7 +155,18 @@ body {
         }
     }
     &--new {
-        @include new-restaurant;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        width: 60px;
+        height: 20px;
+        padding: 5px 12px;
+        border-radius: 2px;
+        font-weight: map-get($roboto-weight, bold);
+        font-size: 0.9rem;
+        text-align: center;
+        margin-right: 10px;
+        @include pastel-darken-font($color-tertiary, 0, 38%);
      }
     &__link {
         text-decoration: none;
@@ -160,39 +179,12 @@ body {
         border-radius: 20px 20px 0 0;
         width: 100%;
         height: 200px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        &--1 {
-            background-image: map-get($la-palette-du-gout, mobile);
-        }
-        &--2 {
-            background-image: map-get($la-note-enchantee, mobile);
-        }
-        &--3 {
-            background-image:map-get($a-la-francaise, mobile);
-        }
-        &--4 {
-            background-image: map-get($le-delice-des-sens,mobile);
-        }
-
-        @media (min-width: 992px) {
-            &--1 {
-                background-image: map-get($la-palette-du-gout, medium);
-            }
-            &--2 {
-                background-image: map-get($la-note-enchantee, medium);
-            }
-            &--3 {
-                background-image:map-get($a-la-francaise, medium);
-            }
-            &--4 {
-                background-image: map-get($le-delice-des-sens,medium);
-            }
-            
+        @include basic-img(cover);
+        @include restaurant-image-opti(mobile);
+        @include tablettes {
+            @include restaurant-image-opti(medium)
         }
     }
-
     &__description
     {
         display: flex;
