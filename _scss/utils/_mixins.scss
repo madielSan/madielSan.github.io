@@ -35,11 +35,10 @@
     background-size: $size;
     background-position: center;
 }
-
-//Mixin qui permet l'agrandissement d'un élément au survol. Le degré d'agrandissement est paramétrable.
-@mixin scale-hover($scale:1.10) {
+//Mixin qui permet l'agrandissement d'un élément au survol. Le degré d'agrandissement et la durée de l'animation sont paramétrables.
+@mixin scale-hover($scale:1.10, $anim-duration:400ms) {
     transform: scale(1);
-    transition: transform 300ms;
+    transition: all $anim-duration;
     &:hover {
         transform: scale($scale);
     }

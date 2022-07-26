@@ -142,10 +142,9 @@
     background-color: white;
     border-radius: 20px;
     margin: 25px 0;
-    @include tablettes {width: 43%}
     @include dark-box-shadow;
-    @include scale-hover(1.05);
-    transition: all 300ms;
+    @include scale-hover(1.03, 600ms);
+    @include tablettes {width: 43%; @include scale-hover(1.05, 600ms);}
     &:hover {
         @include light-box-shadow(#000, 70%, 4px 4px 9px) 
     }
@@ -194,11 +193,12 @@
         color: #000;
         &__title
         {   
-            font-size: 1.2rem;
-            margin-bottom: 0;
+            font-size: 1.15rem;
+            font-weight: map-get($roboto-weight, bolder);
+            margin-bottom: 3px;
         }
         &__location {
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin-top: 0;
             margin-bottom: 15px;
         }

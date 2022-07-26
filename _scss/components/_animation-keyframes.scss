@@ -40,7 +40,7 @@
  Permet au bloc contenant le chargement de disparaître à la fin de l'animation.*/
 @keyframes display{
     0% {
-    z-index: 12;
+    z-index: 10;
     background-color: white;
     }
     100% {
@@ -50,7 +50,7 @@
 
 @-webkit-keyframes display{
     0% {
-    z-index: 12;
+    z-index: 10;
     background-color: white;
     }
     100% {
@@ -60,7 +60,7 @@
 
 @-moz-keyframes display{
     0% {
-    z-index: 12;
+    z-index: 10;
     background-color: white;
     }
     100% {
@@ -70,7 +70,7 @@
 
 @-o-keyframes display{
     0% {
-    z-index: 12;
+    z-index: 10 ;
     background-color: white;
     }
     100% {

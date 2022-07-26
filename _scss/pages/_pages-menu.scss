@@ -1,6 +1,7 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 
+// HEADER AVEC LOGO ET FLECHE DE RETOUR A LA PAGE D'ACCUEIL
 .back-to-homepage {
     position: relative;
     background-color: #fff;
@@ -20,19 +21,20 @@
     &__omf-logo{
         width: 90%;
         font-family: $shrik;
-        font-size: 35px;
+        font-size: 30px;
         margin-right: 35px;
         @include tablettes{font-size: 45px; margin-right: 70px;}
         text-align: center;
         @include basic-img;
     }
 }
+// CONTENU PRINCIPAL DE LA PAGE
 .restaurant {
     background-color: $light-grey-background;
     @include tablettes {
         background-color: #fff
     };
-    &__img-container{
+    &__img-container{ //conteneur de l'image du restaurant
         @include tablettes {
             display: flex;
             justify-content: center;
@@ -56,7 +58,7 @@
         }
     }
 }
-.carte {
+.carte { //Contient 80% de la page -> le nom du restaurant, ses menus, le bouton "Commander", et les différents éléments.
     background-color: $light-grey-background;
     border-radius: 50px 50px 0 0;
     position: relative;
@@ -92,14 +94,14 @@
         }
     } 
 }
-.dishes {
+.dishes { //conteneur destiné à assembler les parties du menu en colonne, pour le format desktop.
     @include desktop {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
 }
-.dish-part {
+.dish-part { //contient les parties du menu, "entrées", "plats", "desserts".
     margin-top: 40px;
     &:nth-of-type(1) {
         margin-top: auto;
@@ -132,11 +134,12 @@
             content:"______";
             position: relative;
             top: -12px;
-            color: $color-tertiary;};
+            color: $color-tertiary;
+            }
         }
     }
 }
-.dish {
+.dish { //contient les blocs des plats
     height: 75px;
     background-color: #fff;
     opacity: 0;
@@ -219,7 +222,7 @@
         }
     }
 }
-.command {
+.command { //conteneur du bouton "Commander", le bouton en lui-même est décrit dans components/button.
     display: flex;
     justify-content: center;
     margin-top: 65px;

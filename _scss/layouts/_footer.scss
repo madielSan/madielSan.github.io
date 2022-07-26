@@ -11,18 +11,22 @@
         display: flex;
         flex-direction: column;
         z-index: 1;
+        padding-bottom: 15px;
         &__link {
             z-index: 2;
             text-decoration: none;
             color: #fff;
             margin-bottom: 10px;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            @include desktop {font-size: 1.2rem;}
             transition: all 100ms linear;
             margin-left: 5px;
             &:hover {
                 text-decoration: underline;
             }
             &__icon {
+                font-size: 0.85rem;
+                @include desktop {font-size: 1rem;}
                 margin-right: 5px;
             }
         }
