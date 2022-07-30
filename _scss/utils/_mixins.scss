@@ -43,6 +43,13 @@
         transform: scale($scale);
     }
 }
+@mixin placeholder-location {
+    &::placeholder {
+        font-size: 1rem;
+        @include lighten-black-font;
+        @include tablettes {font-size: 1.2rem;}
+    }
+}
 //Mixin qui permet à un élément d'avoir plusieurs couleurs dégradés de bas vers le haut droit. Les couleurs sont paramétrables.
 @mixin gradiant-color($color1, $color2) {
    color: linear-gradient(to bottom right, $color1, $color2);  

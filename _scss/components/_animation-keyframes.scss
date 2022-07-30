@@ -1,6 +1,8 @@
 // ANIMATIONS POUR LA PAGE D'ACCUEIL
 
-// Empêche la page d'accueil de scroller pendant la phase de chargement.
+/* ANIMATIONS POUR LE LOAD SPINNER 
+
+Empêche la page d'accueil de scroller pendant la phase de chargement. */
 @keyframes loading-no-scroll {
     0% {
         overflow: hidden;
@@ -36,8 +38,7 @@
         overflow: visible;
     } 
 }
-/* ANIMATIONS POUR LE LOAD SPINNER 
- Permet au bloc contenant le chargement de disparaître à la fin de l'animation.*/
+ //Permet au bloc contenant le chargement de disparaître à la fin de l'animation.
 @keyframes display{
     0% {
     z-index: 10;
