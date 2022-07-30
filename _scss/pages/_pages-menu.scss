@@ -22,10 +22,10 @@
     }
     &__omf-logo{
         width: 90%;
+        margin: auto;
         font-family: $shrik;
-        font-size: 30px;
-        margin-right: 35px;
-        @include tablettes{font-size: 45px; margin-right: 70px;}
+        font-size: 35px;
+        @include tablettes{font-size: 45px;}
         text-align: center;
         @include basic-img;
     }
