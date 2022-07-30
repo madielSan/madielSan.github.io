@@ -6,8 +6,9 @@
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    margin-left: 15px;
     &__header-logo {
-        width: 200px;
+        width: 180px;
         @include tablettes {width: 250px;}
         margin: 10px 0 10px 25px;
     }
