@@ -8,9 +8,9 @@
     padding: 10px 0;
     margin-left: 15px;
     &__header-logo {
-        width: 180px;
+        width: 190px;
         @include tablettes {width: 250px;}
-        margin: 10px 0 10px 25px;
+        margin: 10px;
     }
 }
 //  User Location zone
