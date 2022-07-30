@@ -11,12 +11,15 @@
         position: absolute;
         flex: 1;
         cursor: pointer;
-        width: 100%;
+        width: 30px;
+        height: 30px;
         &:hover {
             flex: 0;
         }
         //icône du coeur rempli
         &--full  {
+            width: 30px;
+            height: 30px;
             position: absolute;
             flex: 0;
             // les règles "fill" et "stroke" spécifiques au format d'images svg permettent à la bordure et l'intérieur du coeur changer de couleur en lien avec la balise <linearGradiant>

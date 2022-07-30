@@ -107,21 +107,18 @@
         @include dark-box-shadow;
         @include tablettes {width: 30%; margin: 30px 25px;}
         transition: all 400ms ease-in-out;
-        &:hover {
-            @include pastel-darken-font($color-primary, 35%, 0%);
-            @include dark-box-shadow($grey-background, 20%);
-            transform: scale(1.03);
-        }
         &__step {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: $color-primary;
             color: #fff;
-            width:15px;
-            height: 14px;
+            width: 15px;
+            height: 15px;
             font-size: 12px;
             text-align: center;
-            border-radius:50px;
-            margin-right: 15px;
-            padding: 4px;
+            border-radius:100%;
+            padding: 5px;
             position: relative;
             right: 12px;
         }
@@ -131,6 +128,11 @@
             font-size: 1.1rem;
             margin: 0 15px;
             @include tablettes {width: 100%;text-align: center;}
+        }
+        &:hover {
+            @include pastel-darken-font($color-primary, 35%, 0%);
+            @include dark-box-shadow($grey-background, 20%);
+            transform: scale(1.03);
         }
     }
 }
